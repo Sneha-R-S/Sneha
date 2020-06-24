@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'carlin',
+    loadChildren: () => import('./carlin/carlin.module').then( m => m.CarlinPageModule)
+  },
 ];
 
 @NgModule({
